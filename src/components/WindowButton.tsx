@@ -2,6 +2,7 @@ import { faWindowMaximize, faWindowMinimize, faWindowRestore } from "@fortawesom
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { FC } from "react";
+import { observer } from "mobx-react-lite";
 import classNames from "classnames";
 
 interface WindowButtonProps {
@@ -30,4 +31,4 @@ const WindowButton: FC<WindowButtonProps> = ({ type = "close", maximize }: Windo
   );
 };
 
-export default WindowButton;
+export default observer(WindowButton);

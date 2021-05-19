@@ -1,3 +1,4 @@
+import { observer } from "mobx-react-lite";
 import React, { FC } from "react";
 import WindowButton from "./WindowButton";
 
@@ -18,4 +19,4 @@ const TitleBar: FC<TitleBarProps> = ({ title }: TitleBarProps) => {
   );
 };
 
-export default TitleBar;
+export default observer(TitleBar);
