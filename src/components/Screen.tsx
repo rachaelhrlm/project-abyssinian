@@ -10,9 +10,11 @@ interface ScreenProps {
 const Screen: FC<ScreenProps> = ({ previousOperand, currentOperand, operator }: ScreenProps) => {
   return (
     <div className="screen">
+      <div className="previous">
+        <span className="previous-operand">{previousOperand}</span>
+        <span className="operator">{operator}</span>
+      </div>
       <span className="current-operand">{currentOperand}</span>
-      <span className="operator">{operator}</span>
-      <span className="previous-operand">{previousOperand}</span>
     </div>
   );
 };
