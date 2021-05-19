@@ -1,0 +1,35 @@
+.window-button {
+  color: white;
+  font-size: 1.3em;
+
+  .background-primary {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 5px;
+    border: 2px solid white;
+    background: rgba(48, 140, 252, 1);
+    background: linear-gradient(125deg, rgba(48, 140, 252, 1) 0%, rgba(0, 88, 231, 1) 70%, rgba(11, 43, 139, 1) 100%);
+    .icon-primary {
+      filter: drop-shadow(2px 2px 0 rgba(11, 43, 139, 1));
+    }
+  }
+  .background-secondary {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 5px;
+    border: 2px solid white;
+    background: rgb(236, 145, 116);
+    background: linear-gradient(125deg, rgba(236, 145, 116, 1) 0%, rgba(217, 74, 31, 1) 50%, rgba(150, 47, 20, 1) 100%);
+    .icon {
+      filter: drop-shadow(2px 2px 0 rgba(150, 47, 20, 1));
+    }
+  }
+}
