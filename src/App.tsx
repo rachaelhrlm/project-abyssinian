@@ -1,8 +1,8 @@
-import React, { FunctionComponent } from "react";
+import React, { FC } from "react";
 import Calculator from "./components/Calculator";
 import "./styles/main.scss";
 
-const App: FunctionComponent = () => {
+const App: FC = () => {
   return (
     <div className="app">
       <Calculator />
