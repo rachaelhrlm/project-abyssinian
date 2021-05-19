@@ -1,26 +1,21 @@
-import { faWindowMaximize, faWindowMinimize, faWindowRestore } from "@fortawesome/free-regular-svg-icons";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { FC } from "react";
 import { observer } from "mobx-react-lite";
 import classNames from "classnames";
+import calculatorStore from "../stores";
+import { IconDefinition } from "@fortawesome/fontawesome-common-types";
 
 interface WindowButtonProps {
-  type?: "close" | "maximize" | "minimize"; //restore if maximize is true
+  type?: "close" | "maximize" | "minimize";
   maximize?: boolean;
 }
 
-const WindowButton: FC<WindowButtonProps> = ({ type = "close", maximize }: WindowButtonProps) => {
-  const icon =
-    type === "close"
-      ? faTimes
-      : type === "minimize"
-      ? faWindowMinimize
-      : type === "maximize" && maximize
-      ? faWindowRestore
-      : faWindowMaximize;
+const WindowButton: FC<WindowButtonProps> = ({ type = "close" }: WindowButtonProps) => {
+  const icon: IconDefinition = calculatorStore.getWindowButtonIcon(type);
+  const onClick = calculatorStore.getWindowButtonOnClick(type);
+
   return (
-    <div className="window-button">
+    <div className="window-button" onClick={onClick}>
       <span
         className={classNames({ "background-secondary": type === "close" }, { "background-primary": type !== "close" })}
       >

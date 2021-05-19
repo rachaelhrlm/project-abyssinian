@@ -8,6 +8,9 @@ import TitleBar from "./TitleBar";
 import calculatorStore from "../stores";
 
 const Calculator: FC = () => {
+  if (calculatorStore.isHidden) {
+    return null;
+  }
   return (
     <div className="calculator">
       <TitleBar title="Calculator" />
