@@ -1,0 +1,24 @@
+.keypad-button {
+  border-radius: 5px;
+  background-color: $color-body-lighter;
+  border: 1px solid $color-body-border;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+
+  transition: background-color 0.2s ease-out;
+  &:hover {
+    cursor: pointer;
+    background-color: $color-body;
+  }
+
+  .keypad-primary {
+    color: $color-primary-body;
+  }
+
+  .keypad-secondary {
+    color: $color-secondary-body;
+  }
+}
