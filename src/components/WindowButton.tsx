@@ -25,6 +25,7 @@ const WindowButton: FC<WindowButtonProps> = ({ type = "close", maximize }: Windo
       >
         <FontAwesomeIcon icon={icon} className="icon" />
       </span>
+      {type === "close" && <span className="background-secondary-cover" />}
     </div>
   );
 };
