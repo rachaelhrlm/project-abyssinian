@@ -6,28 +6,4 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-  .desktop-icon {
-    background-image: url("../../assets/images/calculatorIcon.png");
-    position: fixed;
-    top: 5vh;
-    left: 5vw;
-    background-size: cover;
-    color: white;
-    width: 50px;
-    height: 50px;
-    text-shadow: 1px 0 $color-primary-darker, 0 1px $color-primary-darker, 1px 1px $color-primary-darker,
-      -1px -1px $color-primary-darker;
-    &:hover {
-      cursor: pointer;
-    }
-
-    h2 {
-      font-weight: 600;
-      font-size: 0.8em;
-      position: relative;
-      margin-top: 50px;
-      margin-left: -8px;
-    }
-  }
 }
