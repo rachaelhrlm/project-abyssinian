@@ -12,6 +12,8 @@ export class CalculatorStore {
     makeAutoObservable(this, {
       close: action.bound,
       open: action.bound,
+      maximize: action.bound,
+      restore: action.bound,
       clear: action.bound,
       delete: action.bound,
       compute: action.bound
@@ -22,8 +24,17 @@ export class CalculatorStore {
     this.isHidden = true;
     this.clear();
   }
+
   public open(): void {
     this.isHidden = false;
+  }
+
+  public maximize(): void {
+    this.isMaximized = true;
+  }
+
+  public restore(): void {
+    this.isMaximized = false;
   }
 
   public clear(): void {
@@ -111,10 +122,10 @@ export class CalculatorStore {
       case "maximize":
         if (this.isMaximized)
           return () => {
-            console.log("test");
+            this.restore();
           };
         return () => {
-          console.log("test");
+          this.maximize();
         };
       case "close":
       default:

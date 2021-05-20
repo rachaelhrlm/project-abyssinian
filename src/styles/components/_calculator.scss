@@ -3,14 +3,22 @@
   background-color: $color-primary-body;
   border: 2px solid $color-primary-darker;
   border-radius: 10px 10px 0 0;
+  z-index: 50;
 
   .calc-body {
     background-color: $color-body;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
+    height: calc(100% - 40px);
     border-left: 1px solid $color-primary-lighter;
     border-bottom: 1px solid $color-primary-lighter;
     border-right: 1px solid $color-primary-body;
     border-top: 1px solid $color-primary-body;
+  }
+  .calc-body-container {
+    width: inherit;
   }
 
   .keypad {
@@ -21,6 +29,11 @@
     row-gap: 5px;
     margin: 5px 10px;
   }
+
+  .maximize-keypad {
+    column-gap: 0.5em;
+    row-gap: 0.5em;
+  }
   .keypad-top {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -28,4 +41,17 @@
     column-gap: 5px;
     margin: 0 10px;
   }
+  .maximize-keypad-top {
+    column-gap: 0.5em;
+    row-gap: 0.5em;
+    margin-bottom: 0.5em;
+  }
+}
+.maximize-window {
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  position: relative;
+  height: calc(100% - 0px);
+  overflow: auto;
 }
