@@ -5,6 +5,15 @@ $color-body-border: #869cb0;
 $color-primary-body: #0058e7;
 $color-primary-lighter: #308bfc;
 $color-primary-darker: #0b2b8b;
+$color-primary-gradient: linear-gradient(
+  0deg,
+  rgba(11, 43, 139, 0.5) 0%,
+  rgba(48, 140, 252, 0.8) 5%,
+  rgba(0, 88, 231, 1) 50%,
+  rgba(0, 88, 231, 1) 80%,
+  rgba(48, 140, 252, 1) 95%,
+  rgba(0, 88, 231, 1) 100%
+);
 
 $color-secondary-body: #d94a1f;
 $color-secondary-lighter: #ec9174;
