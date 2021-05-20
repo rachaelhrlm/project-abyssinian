@@ -15,7 +15,10 @@ const Calculator: FC = () => {
     return null;
   }
   return (
-    <Draggable>
+    <Draggable
+      disabled={calculatorStore.isMaximized}
+      position={calculatorStore.isMaximized ? { x: 0, y: 0 } : undefined}
+    >
       <div className={classNames("calculator", { "maximize-window": calculatorStore.isMaximized })}>
         <TitleBar title="Calculator" />
         <div className="calc-body">

@@ -22,10 +22,6 @@
   }
 }
 .maximize-window {
-  top: 0;
-  bottom: 0;
   width: 100vw;
-  position: relative;
   height: calc(100% - 0px);
-  overflow: auto;
 }
