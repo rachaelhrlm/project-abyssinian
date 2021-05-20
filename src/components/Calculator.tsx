@@ -8,6 +8,7 @@ import Screen from "./Screen";
 import TitleBar from "./TitleBar";
 import calculatorStore from "../stores";
 import classNames from "classnames";
+import Keypad from "./Keypad";
 
 const Calculator: FC = () => {
   if (calculatorStore.isHidden) {
@@ -19,16 +20,15 @@ const Calculator: FC = () => {
         <TitleBar title="Calculator" />
         <div className="calc-body">
           <div className="calc-body-container">
-            <Screen
-              currentOperand={calculatorStore.currentOperand}
-              previousOperand={calculatorStore.previousOperand}
-              operator={calculatorStore.displayOperator}
-            />
-            <div className={classNames("keypad-top", { "maximize-keypad-top": calculatorStore.isMaximized })}>
-              <KeypadButton value="AC" onClick={calculatorStore.clear} />
-              <KeypadButton value="DEL" onClick={calculatorStore.delete} />
-            </div>
-            <div className={classNames("keypad", { "maximize-keypad": calculatorStore.isMaximized })}>
+            <Screen />
+            <Keypad
+              topButtons={
+                <>
+                  <KeypadButton value="AC" onClick={calculatorStore.clear} />
+                  <KeypadButton value="DEL" onClick={calculatorStore.delete} />
+                </>
+              }
+            >
               <KeypadButton value="1" onClick={() => calculatorStore.append("1")} />
               <KeypadButton value="2" onClick={() => calculatorStore.append("2")} />
               <KeypadButton value="3" onClick={() => calculatorStore.append("3")} />
@@ -68,7 +68,7 @@ const Calculator: FC = () => {
                 type="secondary"
                 value={<FontAwesomeIcon icon={faMinus} onClick={() => calculatorStore.setOperator("-")} />}
               />
-            </div>
+            </Keypad>
           </div>
         </div>
       </div>

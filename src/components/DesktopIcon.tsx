@@ -1,6 +1,6 @@
+import { observer } from "mobx-react-lite";
 import React, { FC } from "react";
 import Draggable from "react-draggable";
-import calculatorStore from "../stores";
 interface DesktopIconProps {
   onClick?: React.MouseEventHandler<HTMLDivElement>;
   label?: string;
@@ -16,4 +16,4 @@ const DesktopIcon: FC<DesktopIconProps> = ({ onClick, label }: DesktopIconProps)
   );
 };
 
-export default DesktopIcon;
+export default observer(DesktopIcon);
