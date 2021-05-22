@@ -8,10 +8,9 @@ import "./styles/main.scss";
 const App: FC = () => {
   return (
     <div className="app">
-      <div className="test">
-        <DesktopIcon label="Calculator" onClick={() => calculatorStore.open()} />
-        <Calculator />
-      </div>
+      <DesktopIcon label="Calculator" onClick={() => calculatorStore.open()} />
+      <Calculator />
+
       <TaskBar />
     </div>
   );
