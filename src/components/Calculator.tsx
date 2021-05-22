@@ -22,7 +22,6 @@ const Calculator: FC = () => {
       <div
         className={classNames(
           "calculator",
-
           { show: !calculatorStore.isMinimised },
           { "maximize-window": calculatorStore.isMaximized }
         )}
