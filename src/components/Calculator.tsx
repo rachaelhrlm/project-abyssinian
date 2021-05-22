@@ -11,7 +11,7 @@ import classNames from "classnames";
 import Keypad from "./Keypad";
 
 const Calculator: FC = () => {
-  if (calculatorStore.isHidden || calculatorStore.isMinimised) {
+  if (calculatorStore.isHidden) {
     return null;
   }
   return (
@@ -19,7 +19,14 @@ const Calculator: FC = () => {
       disabled={calculatorStore.isMaximized}
       position={calculatorStore.isMaximized ? { x: 0, y: 0 } : undefined}
     >
-      <div className={classNames("calculator", { "maximize-window": calculatorStore.isMaximized })}>
+      <div
+        className={classNames(
+          "calculator",
+
+          { show: !calculatorStore.isMinimised },
+          { "maximize-window": calculatorStore.isMaximized }
+        )}
+      >
         <TitleBar title="Calculator" />
         <div className="calc-body">
           <div className="calc-body-container">
