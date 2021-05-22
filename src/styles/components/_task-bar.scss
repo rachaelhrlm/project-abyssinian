@@ -5,4 +5,10 @@
   bottom: 0;
   position: fixed;
   display: flex;
+  color: white;
+  justify-content: space-between;
+  .main {
+    display: flex;
+    height: inherit;
+  }
 }
