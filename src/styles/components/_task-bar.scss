@@ -7,13 +7,31 @@
   display: flex;
 
   .start-button {
+    display: flex;
+    align-items: center;
     height: inherit;
-    width: 8em;
-    background: $color-accent-gradient;
-  }
+    cursor: pointer;
 
-  .cat-icon {
+    width: 5em;
+    padding: 0 20px;
+
+    background: $color-accent-gradient;
+    border-radius: 0 10px 10px 0;
+    border-right: 1px solid $color-accent-darker;
+
     color: white;
-    font-size: 1.4em;
+    font-size: 1.5em;
+
+    transition: background 0.5s;
+
+    &:hover {
+      background: $color-accent-darker;
+    }
+
+    span {
+      font-weight: 600;
+      font-style: italic;
+      text-shadow: 2px 2px 3px $color-accent-darker;
+    }
   }
 }
