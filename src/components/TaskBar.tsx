@@ -1,12 +1,13 @@
 import { observer } from "mobx-react-lite";
 import React, { FC } from "react";
+import StartButton from "./StartButton";
+import WindowTab from "./WindowTab";
 
 const TaskBar: FC = () => {
   return (
     <div className="task-bar">
-      <div className="start-button">
-        <span className="logo" /> <span>start</span>
-      </div>
+      <StartButton />
+      <WindowTab />
     </div>
   );
 };

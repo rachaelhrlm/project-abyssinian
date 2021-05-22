@@ -11,7 +11,7 @@ import classNames from "classnames";
 import Keypad from "./Keypad";
 
 const Calculator: FC = () => {
-  if (calculatorStore.isHidden) {
+  if (calculatorStore.isHidden || calculatorStore.isMinimised) {
     return null;
   }
   return (

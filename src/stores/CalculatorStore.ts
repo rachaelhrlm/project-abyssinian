@@ -4,6 +4,7 @@ import { action, makeAutoObservable } from "mobx";
 export class CalculatorStore {
   public isHidden = false;
   public isMaximized = false;
+  public isMinimised = false;
   public currentOperand = "";
   public previousOperand = "";
   public operator: string | undefined = undefined;
@@ -12,6 +13,7 @@ export class CalculatorStore {
     makeAutoObservable(this, {
       close: action.bound,
       open: action.bound,
+      minimise: action.bound,
       maximize: action.bound,
       restore: action.bound,
       clear: action.bound,
@@ -22,11 +24,16 @@ export class CalculatorStore {
 
   public close(): void {
     this.isHidden = true;
+    this.isMaximized = false;
     this.clear();
   }
 
   public open(): void {
     this.isHidden = false;
+  }
+
+  public minimise(): void {
+    this.isMinimised = this.isMinimised ? false : true;
   }
 
   public maximize(): void {
@@ -117,7 +124,7 @@ export class CalculatorStore {
     switch (type) {
       case "minimize":
         return () => {
-          console.log("test");
+          this.minimise();
         };
       case "maximize":
         if (this.isMaximized)

@@ -7,7 +7,6 @@ import { IconDefinition } from "@fortawesome/fontawesome-common-types";
 
 interface WindowButtonProps {
   type?: "close" | "maximize" | "minimize";
-  maximize?: boolean;
 }
 
 const WindowButton: FC<WindowButtonProps> = ({ type = "close" }: WindowButtonProps) => {
