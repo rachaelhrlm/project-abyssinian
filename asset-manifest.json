@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/project-abyssinian/static/css/main.26fa8946.chunk.css",
+    "main.js": "/project-abyssinian/static/js/main.7f088e00.chunk.js",
+    "main.js.map": "/project-abyssinian/static/js/main.7f088e00.chunk.js.map",
+    "runtime-main.js": "/project-abyssinian/static/js/runtime-main.0ae72d09.js",
+    "runtime-main.js.map": "/project-abyssinian/static/js/runtime-main.0ae72d09.js.map",
+    "static/js/2.587ee2ee.chunk.js": "/project-abyssinian/static/js/2.587ee2ee.chunk.js",
+    "static/js/2.587ee2ee.chunk.js.map": "/project-abyssinian/static/js/2.587ee2ee.chunk.js.map",
+    "index.html": "/project-abyssinian/index.html",
+    "static/css/main.26fa8946.chunk.css.map": "/project-abyssinian/static/css/main.26fa8946.chunk.css.map",
+    "static/js/2.587ee2ee.chunk.js.LICENSE.txt": "/project-abyssinian/static/js/2.587ee2ee.chunk.js.LICENSE.txt",
+    "static/media/main.scss": "/project-abyssinian/static/media/windowsXpBackground.0d04ace0.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0ae72d09.js",
+    "static/js/2.587ee2ee.chunk.js",
+    "static/css/main.26fa8946.chunk.css",
+    "static/js/main.7f088e00.chunk.js"
+  ]
+}
